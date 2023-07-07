@@ -249,14 +249,6 @@ public class VariableAndType {
 		string[3] = 'l';
 		string[4] = 'o';
 		
-		System.out.print(string[0]);
-		System.out.print(string[1]);
-		System.out.print(string[2]);
-		System.out.print(string[3]);
-		System.out.println(string[4]);
-		
-		System.out.println(string);
-		
 	}
 
 }

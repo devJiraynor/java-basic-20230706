@@ -234,28 +234,7 @@ public class VariableAndType {
 		numbers[0] = 10;
 		System.out.println(numbers[0]);
 		
-		// numbers[3] = 99;
-		
-		// 배열의 길이
-		// 배열명.lenght;
-		System.out.println(numbers.length);
-		numbers[numbers.length - 1] = 99;
-		
-		// 문자열
-		char[] string = new char[10];
-		string[0] = 'H';
-		string[1] = 'e';
-		string[2] = 'l';
-		string[3] = 'l';
-		string[4] = 'o';
-		
-		System.out.print(string[0]);
-		System.out.print(string[1]);
-		System.out.print(string[2]);
-		System.out.print(string[3]);
-		System.out.println(string[4]);
-		
-		System.out.println(string);
+		numbers[3] = 99;
 		
 	}
 

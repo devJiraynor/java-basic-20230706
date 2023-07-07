@@ -257,6 +257,8 @@ public class VariableAndType {
 		
 		System.out.println(string);
 		
+		string = new char[] {'B', 'y', 'e', ' ', ' '};
+		
 	}
 
 }

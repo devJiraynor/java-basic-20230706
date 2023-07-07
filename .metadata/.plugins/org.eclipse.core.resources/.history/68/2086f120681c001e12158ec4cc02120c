@@ -255,8 +255,6 @@ public class VariableAndType {
 		System.out.print(string[3]);
 		System.out.println(string[4]);
 		
-		System.out.println(string);
-		
 	}
 
 }
