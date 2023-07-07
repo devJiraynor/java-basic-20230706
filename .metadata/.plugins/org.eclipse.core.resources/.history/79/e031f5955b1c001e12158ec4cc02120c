@@ -167,42 +167,7 @@ public class VariableAndType {
 		
 		System.out.println(doubleVariable);
 		
-		// 문자형 타입 : 문자(유니코드 및 아스키코드)를 담을 수 있는 데이터 타입
-		// - char
-		//   2byte (16bit)의 메모리 공간을 차지함
-		//   문자 하나만 담을 수 있음, 아스키 코드, 유니 코드 또한 담을 수 있음
-		char charVariable;
-		charVariable = 'A';
-		System.out.println(charVariable);
-		charVariable = 97;
-		System.out.println(charVariable);
-		
-		// 논리형 타입 : 논리 값을 담을 수 있는 데이터 타입
-		// true, false의 값을 가질 수 있음
-		// - boolean
-		//   1byte (8bit)의 메모리 공간을 차지함
-		boolean booleanVariable;
-		booleanVariable = true;
-		
-		// 형변환
-		// 특정 변수를 다른 데이터 타입의 변수로 옮기는 것
-		// 자동 형변환 - 강제 형변환
-		
-		// 자동 형변환 : 같은 타입일 때 작은 데이터 타입을 큰 데이터 타입으로 
-		//            형변환할 때는 자바가 알아서 형변환을 진행
-		byteVariable = 10;
-		shortVariable = byteVariable;
-		
-		floatVariable = 3.14F;
-		doubleVariable = floatVariable;
-		
-		// 강제 형변환 : 다른 타입이거나 큰 데이터 타입을 작은 데이터 타입으로
-		//            형변환할 때는 개발자가 명시적으로 형변환을 해야 함
-		byteVariable = (byte) shortVariable;
-		floatVariable = (float) doubleVariable;
-		
-		charVariable = (char) shortVariable;
-		shortVariable = (short) charVariable;
+		// 문자형 타입 : 문자 (유니코드 및 아스키코드)를 담을 수 있는 데이터 타입
 		
 	}
 

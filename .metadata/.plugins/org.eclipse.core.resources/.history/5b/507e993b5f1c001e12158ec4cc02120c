@@ -198,11 +198,7 @@ public class VariableAndType {
 		
 		// 강제 형변환 : 다른 타입이거나 큰 데이터 타입을 작은 데이터 타입으로
 		//            형변환할 때는 개발자가 명시적으로 형변환을 해야 함
-		byteVariable = (byte) shortVariable;
-		floatVariable = (float) doubleVariable;
-		
-		charVariable = (char) shortVariable;
-		shortVariable = (short) charVariable;
+		shortVariable = byteVariable;
 		
 	}
 

@@ -189,20 +189,9 @@ public class VariableAndType {
 		// 자동 형변환 - 강제 형변환
 		
 		// 자동 형변환 : 같은 타입일 때 작은 데이터 타입을 큰 데이터 타입으로 
-		//            형변환할 때는 자바가 알아서 형변환을 진행
+		//            형변환 할 때는 자바가 알아서 형변환을 진행
 		byteVariable = 10;
 		shortVariable = byteVariable;
-		
-		floatVariable = 3.14F;
-		doubleVariable = floatVariable;
-		
-		// 강제 형변환 : 다른 타입이거나 큰 데이터 타입을 작은 데이터 타입으로
-		//            형변환할 때는 개발자가 명시적으로 형변환을 해야 함
-		byteVariable = (byte) shortVariable;
-		floatVariable = (float) doubleVariable;
-		
-		charVariable = (char) shortVariable;
-		shortVariable = (short) charVariable;
 		
 	}
 

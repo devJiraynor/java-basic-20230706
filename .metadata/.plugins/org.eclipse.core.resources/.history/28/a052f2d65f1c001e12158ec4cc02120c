@@ -201,8 +201,7 @@ public class VariableAndType {
 		byteVariable = (byte) shortVariable;
 		floatVariable = (float) doubleVariable;
 		
-		charVariable = (char) shortVariable;
-		shortVariable = (short) charVariable;
+		charVariable = shortVariable;
 		
 	}
 
