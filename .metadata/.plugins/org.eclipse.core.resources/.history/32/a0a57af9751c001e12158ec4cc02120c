@@ -1,0 +1,10 @@
+package chapter1;
+
+public class ConsoleIO {
+
+	public static void main(String[] args) {
+		// Java의 콘솔을 이용한 입출력
+		
+	}
+
+}
