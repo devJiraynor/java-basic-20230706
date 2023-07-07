@@ -290,40 +290,6 @@ public class VariableAndType {
 		String longComment1 = "내가 그린 기린 그림은 잘 그린 기린 그림이고 ";
 		String longComment2 = "네가 그린 기린 그림은 잘 못그린 기린 그림이다.";
 		
-		// 문자열 결합 : + 연산자나 concat(문자열변수); 기능을 사용
-		String longComment = longComment1 + longComment2;
-		System.out.println(longComment);
-		
-		// 문자열 비교 : equals(문자열변수); 기능을 사용
-		boolean isEqual = longComment1.equals(longComment2);
-		System.out.println(isEqual);
-		
-		// 문자열 길이 : length(); 기능을 사용
-		int commentLenght = longComment.length();
-		System.out.println(commentLenght);
-		
-		// 문자 찾기 : indexOf(문자열변수); 기능을 사용
-		int findedIndex = longComment.indexOf("기린", 7);
-		System.out.println(findedIndex);
-		
-		// 문자 자르기 : substring(시작인덱스, 마지막인덱스); 기능을 사용
-		String painting = longComment.substring(3, 8);
-		System.out.println(painting);
-		
-		// 문자열 변환
-		// 모든 문자를 대문자로 변경 : toUpperCase() 기능을 사용
-		// 모든 문자를 소문자로 변경 : toLowerCase() 기능을 사용
-		// 문자열의 맨 앞 뒤의 공백 제거 : trim() 기능을 사용
-		
-		// 참조형 데이터 타입의 null
-		// 참조형 데이터 타입의 변수의 경우는 그 무엇도 참조하지 않는다는
-		// 'null' 값을 가질 수 있음
-		stringVariable = null;
-		System.out.println(stringVariable);
-		
-		// null 을 가지고 있는 참조 변수는 사용할 수 없음
-		stringVariable.equals("안녕");
-		
 	}
 
 }

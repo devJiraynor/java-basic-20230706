@@ -321,9 +321,6 @@ public class VariableAndType {
 		stringVariable = null;
 		System.out.println(stringVariable);
 		
-		// null 을 가지고 있는 참조 변수는 사용할 수 없음
-		stringVariable.equals("안녕");
-		
 	}
 
 }

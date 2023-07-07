@@ -320,8 +320,6 @@ public class VariableAndType {
 		// 'null' 값을 가질 수 있음
 		stringVariable = null;
 		System.out.println(stringVariable);
-		
-		// null 을 가지고 있는 참조 변수는 사용할 수 없음
 		stringVariable.equals("안녕");
 		
 	}
