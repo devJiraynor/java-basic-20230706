@@ -104,8 +104,7 @@ public class Operator {
 		// 논리표현식 ? 참일때 결과(표현식) : 거짓일때 결과(표현식);
 		a = 9;
 		String message = a > b ? "a는 b보다 큽니다." 
-				: a < b ? "a는 b보다 작습니다." 
-				: "a는 b와 같습니다.";
+				: (a < b ? "a는 b보다 작습니다." : "a는 b와 같습니다.");
 		System.out.println(message);
 		
 	}

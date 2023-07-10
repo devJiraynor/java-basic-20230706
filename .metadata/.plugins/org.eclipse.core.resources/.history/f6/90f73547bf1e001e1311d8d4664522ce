@@ -102,11 +102,7 @@ public class Operator {
 		
 		// 5. 삼항 연산자 : 논리 표현식의 결과에 따라 서로 다른 결과를 반환하는 연산자
 		// 논리표현식 ? 참일때 결과(표현식) : 거짓일때 결과(표현식);
-		a = 9;
-		String message = a > b ? "a는 b보다 큽니다." 
-				: a < b ? "a는 b보다 작습니다." 
-				: "a는 b와 같습니다.";
-		System.out.println(message);
+		String message = a > b ? "a는 b보다 큽니다." : "a는 b보다 크지 않습니다.";
 		
 	}
 }
