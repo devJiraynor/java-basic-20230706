@@ -78,34 +78,8 @@ public class Operator {
 		
 		// 4. 논리 연산자: 논리값을 조합 혹은 반전할 때 사용하는 연산자
 		
-		final boolean TRUE = true;
-		final boolean FALSE = false;
-		// && : 좌항과 우항이 모두 true일 때 true, 하나라도 false면 false 반환
-		compareResult = TRUE && TRUE;
-		System.out.println(compareResult);
-		compareResult = TRUE && FALSE;
-		System.out.println(compareResult);
-		compareResult = FALSE && TRUE;
-		System.out.println(compareResult);
-		
-		// || : 좌항과 우항 중 하나라도 true면 true, 모두 false면 false 반환
-		compareResult = TRUE || TRUE;
-		System.out.println(compareResult);
-		compareResult = TRUE || FALSE;
-		System.out.println(compareResult);
-		compareResult = FALSE || FALSE;
-		System.out.println(compareResult);
-		
-		// ! : 논리값을 반전시키는 연산자
-		compareResult = !TRUE;
-		System.out.println(compareResult);
-		
-		// 5. 삼항 연산자 : 논리 표현식의 결과에 따라 서로 다른 결과를 반환하는 연산자
-		
 	}
 }
-
-
 
 
 

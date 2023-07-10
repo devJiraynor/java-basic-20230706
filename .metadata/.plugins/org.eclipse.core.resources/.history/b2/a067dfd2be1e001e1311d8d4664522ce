@@ -100,12 +100,8 @@ public class Operator {
 		compareResult = !TRUE;
 		System.out.println(compareResult);
 		
-		// 5. 삼항 연산자 : 논리 표현식의 결과에 따라 서로 다른 결과를 반환하는 연산자
-		
 	}
 }
-
-
 
 
 
