@@ -136,10 +136,6 @@ public class Controll {
 		for (int item: numbers) {
 			System.out.println(item);
 		}
-		
-		// example
-		// 7648 이 수의 모든 자리 수를 다 더한 값은?
-		
 	}
 
 }

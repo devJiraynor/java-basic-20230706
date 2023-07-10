@@ -115,30 +115,9 @@ public class Controll {
 		
 		// 배열을 초기화할 때 / 배열에 접근할 때
 		int[] numbers = new int[10];
-//		number = 0;
-//		for (int item: numbers) {
-//			System.out.println(number);
-//			item = number;
-//			number++;
-//		}
-		
-		for (int index = 0; index < numbers.length; index++) {
-			numbers[index] = index;
+		for (int index = 0; index < 10; index++) {
+			number[index] = index;
 		}
-		
-		for (int index = 0; index < numbers.length; index++) {
-			System.out.println(numbers[index]);
-		}
-		
-		// foreach (향상된 for 문)
-		// for (반복할배열의요소타입 변수명: 반복할배열) { ... }
-		// foreach 반복문은 읽기전용
-		for (int item: numbers) {
-			System.out.println(item);
-		}
-		
-		// example
-		// 7648 이 수의 모든 자리 수를 다 더한 값은?
 		
 	}
 
