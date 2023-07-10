@@ -82,22 +82,7 @@ public class Controll {
 		// for (조건에 사용될 변수 초기화; 조건문; 증감식) { 반복할 구문 }
 		
 		// 특정 코드를 몇 번 반복하고자 할 때
-//		System.out.println("이 문장은 100번 출력됩니다.");
-//		System.out.println("이 문장은 100번 출력됩니다.");
-//		System.out.println("이 문장은 100번 출력됩니다.");
-//		System.out.println("이 문장은 100번 출력됩니다.");
-//		System.out.println("이 문장은 100번 출력됩니다.");
-//		System.out.println("이 문장은 100번 출력됩니다.");
-//		System.out.println("이 문장은 100번 출력됩니다.");
-//		System.out.println("이 문장은 100번 출력됩니다.");
-//		System.out.println("이 문장은 100번 출력됩니다.");
-//		System.out.println("이 문장은 100번 출력됩니다.");
-		
-		for (int count = 0; count < 100; count++) {
-			System.out.println("이 문장은 100번 출력됩니다.");
-		}
-		
-		// 특정한 순서를 가지고 반복하고자 할 때
+		System.out.println("");
 		
 	}
 
