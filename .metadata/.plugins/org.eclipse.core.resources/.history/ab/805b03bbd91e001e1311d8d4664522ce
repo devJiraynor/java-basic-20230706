@@ -1,7 +1,5 @@
 package chapter1;
 
-import java.util.Scanner;
-
 // 제어문
 // 프로그램의 흐름을 제어하고, 조건에 따라서 코드의 실행 여부를 결정하는 구문
 public class Controll {
@@ -155,34 +153,6 @@ public class Controll {
 			sum += (number % Math.pow(10, n)) / Math.pow(10, n-1);
 		}
 		System.out.println(sum);
-		
-		// while : 반복 횟수가 정해져 있지 않을 때 사용하는 반복문
-		// while (조건) { 반복 실행할 코드 }
-		
-		number = 0;
-		while (number < 10) {
-			System.out.println(number);
-			number++;
-		}
-		
-		number = 0;
-		while (number < 10) {
-			if (number == 9) break;
-			if (number % 2 == 1) {
-				number++;
-				continue;
-			}
-			System.out.println(number);
-			number++;
-		}
-		
-		while (true) {
-			Scanner scanner = new Scanner(System.in);
-			int inputNumber = scanner.nextInt();
-			if (inputNumber == -1) break;
-			System.out.println("입력한 수 : " + inputNumber);
-		}
-		
 	}
 
 }

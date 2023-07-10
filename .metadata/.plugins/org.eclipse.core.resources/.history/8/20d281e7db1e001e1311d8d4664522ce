@@ -179,8 +179,6 @@ public class Controll {
 		while (true) {
 			Scanner scanner = new Scanner(System.in);
 			int inputNumber = scanner.nextInt();
-			if (inputNumber == -1) break;
-			System.out.println("입력한 수 : " + inputNumber);
 		}
 		
 	}

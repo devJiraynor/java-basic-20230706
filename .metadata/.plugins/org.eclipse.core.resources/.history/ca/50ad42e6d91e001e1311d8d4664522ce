@@ -1,7 +1,5 @@
 package chapter1;
 
-import java.util.Scanner;
-
 // 제어문
 // 프로그램의 흐름을 제어하고, 조건에 따라서 코드의 실행 여부를 결정하는 구문
 public class Controll {
@@ -162,25 +160,7 @@ public class Controll {
 		number = 0;
 		while (number < 10) {
 			System.out.println(number);
-			number++;
-		}
-		
-		number = 0;
-		while (number < 10) {
-			if (number == 9) break;
-			if (number % 2 == 1) {
-				number++;
-				continue;
-			}
-			System.out.println(number);
-			number++;
-		}
-		
-		while (true) {
-			Scanner scanner = new Scanner(System.in);
-			int inputNumber = scanner.nextInt();
-			if (inputNumber == -1) break;
-			System.out.println("입력한 수 : " + inputNumber);
+			number ++;
 		}
 		
 	}
