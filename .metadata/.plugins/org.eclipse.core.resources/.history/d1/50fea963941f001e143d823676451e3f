@@ -103,16 +103,6 @@ public class ParkingApplication {
 		
 		// 주차
 		parkingSpaces[parkingLayer][parkingSpace] = true;
-		registerNumberes[parkingLayer][parkingSpace] = registerNumber;
-		getInTimes[parkingLayer][parkingSpace] = getInTime;
-		types[parkingLayer][parkingSpace] = type;
-		
-		// 주차 위치 확인
-		registerNumber = scanner.nextLine();
-		
-		for (int layer = 0; layer < registerNumberes.lenght) {
-			
-		}
 			
 	}
 

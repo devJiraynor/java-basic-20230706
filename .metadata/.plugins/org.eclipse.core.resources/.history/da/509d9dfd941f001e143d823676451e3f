@@ -108,11 +108,6 @@ public class ParkingApplication {
 		types[parkingLayer][parkingSpace] = type;
 		
 		// 주차 위치 확인
-		registerNumber = scanner.nextLine();
-		
-		for (int layer = 0; layer < registerNumberes.lenght) {
-			
-		}
 			
 	}
 

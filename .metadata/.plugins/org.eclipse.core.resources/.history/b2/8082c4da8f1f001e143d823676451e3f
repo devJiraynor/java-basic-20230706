@@ -65,53 +65,8 @@ public class ParkingApplication {
 		System.out.print("주차 공간 (0 ~ 29) : ");
 		int parkingSpace = scanner.nextInt();
 		
-		// 차량번호 검증
-		if (registerNumber != null && registerNumber.isBlank()) {
+		if (registerNumber.isBlank()) {
 			System.out.println("차량번호를 반드시 입력하세요.");
-			return;
-		}
-		
-		// 차종 검증
-		if (type != null && !type.equals("경차") && !type.equals("중대형") && !type.equals("SUV")) {
-			System.out.println("경차, 중대형, SUV 중에 하나를 입력하세요.");
-			return;
-		}
-		
-		// 입차시간 검증
-		if (getInTime < 0 || getInTime > 24) {
-			System.out.println("입차 시간은 0 ~ 24 사이어야 합니다.");
-			return;
-		}
-		
-		// 주차 층 검증
-		if (parkingLayer < 0 || parkingLayer > 9) {
-			System.out.println("주차 층은 0 ~ 9 사이어야 합니다.");
-			return;
-		}
-		
-		// 주차 공간 검증
-		if (parkingSpace < 0 || parkingSpace > 29) {
-			System.out.println("주차 공간은 0 ~ 29 사이어야 합니다.");
-			return;
-		}
-		
-		// 해당 주차 공간이 비었는지 검증
-		if (parkingSpaces[parkingLayer][parkingSpace]) {
-			System.out.println("이미 주차된 공간입니다.");
-			return;
-		}
-		
-		// 주차
-		parkingSpaces[parkingLayer][parkingSpace] = true;
-		registerNumberes[parkingLayer][parkingSpace] = registerNumber;
-		getInTimes[parkingLayer][parkingSpace] = getInTime;
-		types[parkingLayer][parkingSpace] = type;
-		
-		// 주차 위치 확인
-		registerNumber = scanner.nextLine();
-		
-		for (int layer = 0; layer < registerNumberes.lenght) {
-			
 		}
 			
 	}
