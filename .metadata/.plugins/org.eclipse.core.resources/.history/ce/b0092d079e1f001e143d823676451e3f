@@ -185,10 +185,6 @@ public class ParkingApplication {
 		int result = (leaveTime - getInTimes[foundLayer][foundSpace]) * typeAmount;
 		System.out.println("최종 금액은 " + result + "원 입니다.");
 		
-		parkingSpaces[foundLayer][foundSpace] = false;
-		registerNumberes[foundLayer][foundSpace] = null;
-		getInTimes[foundLayer][foundSpace] = 0;
-		types[foundLayer][foundSpace] = null;
 			
 	}
 

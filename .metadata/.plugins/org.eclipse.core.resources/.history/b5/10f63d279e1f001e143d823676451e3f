@@ -187,8 +187,6 @@ public class ParkingApplication {
 		
 		parkingSpaces[foundLayer][foundSpace] = false;
 		registerNumberes[foundLayer][foundSpace] = null;
-		getInTimes[foundLayer][foundSpace] = 0;
-		types[foundLayer][foundSpace] = null;
 			
 	}
 
