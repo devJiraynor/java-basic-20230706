@@ -1,7 +1,5 @@
 package example.parking;
 
-import java.util.Scanner;
-
 // 주차장 관리 프로그램
 // 주차 등록
 // 주차 확인
@@ -47,24 +45,17 @@ public class ParkingApplication {
 			System.out.println(layer + 1 + "층 여유 공간 : " + layerFreeSpaces[layer]);
 		}
 		
-		Scanner scanner = new Scanner(System.in);
-		
 		// 입차
-		
-		System.out.print("차량 번호 : ");
-		String registerNumber = scanner.nextLine();
-		
-		System.out.print("차종 : ");
-		String type = scanner.nextLine();
-
-		System.out.print("입차 시간 (0 ~ 24) : ");
-		int getInTime = scanner.nextInt();
+		System.out.print("입차 시간 : ");
 		
 		System.out.print("주차 층 (0 ~ 9) : ");
-		int parkingLayer = scanner.nextInt();
 		
 		System.out.print("주차 공간 (0 ~ 29) : ");
-		int parkingSpace = scanner.nextInt();
+		
+		System.out.print("차량 번호 : ");
+		
+		System.out.print("차종 : ");
+		
 	}
 
 }
