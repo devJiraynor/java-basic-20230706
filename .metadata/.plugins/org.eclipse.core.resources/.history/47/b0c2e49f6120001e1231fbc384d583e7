@@ -115,11 +115,7 @@ public class ClassAndObject {
 		System.out.println(gildong.name);
 		System.out.println(chulsoo.name);
 		
-		// 각각의 인스턴스는 독립적인 속성을 가지고 있음
-		// 독립적인 속성 : 인스턴스 변수
 		gildong.name = "홍동길";
-		System.out.println(gildong.name);
-		System.out.println(chulsoo.name);
 		
 	}
 

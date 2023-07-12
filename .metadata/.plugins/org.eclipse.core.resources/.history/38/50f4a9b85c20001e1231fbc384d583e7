@@ -85,42 +85,6 @@ public class ClassAndObject {
 		// 특정 클래스로 생성된 객체를 '특정 클래스의 인스턴스'라고 부름
 		// 클래스로 생성된 각각의 인스턴스는 서로 다른 속성 값을 가지고 있음
 		
-		// 객체 (인스턴스) 생성 방법
-		// 생성하고자하는 형태의 클래스로 참조변수를 선언하고
-		// 해당 참조변수에 new 클래스(); 를 이용하여 생성한 인스턴스의 주소를 저장
-		
-		// 클래스명 참조변수명 = new 클래스명();
-		Student gildong = new Student();
-		gildong.studentNumber = "1223020";
-		gildong.name = "홍길동";
-		gildong.age = 24;
-		gildong.telNumber = "010-1111-1111";
-		gildong.course = "경영학";
-		gildong.grade = "A+";
-		
-		gildong.study();
-		gildong.test();
-		gildong.sleep();
-		
-		Student chulsoo = new Student();
-		chulsoo.studentNumber = "2323110";
-		chulsoo.name = "김철수";
-		chulsoo.age = 20;
-		chulsoo.telNumber = "010-2222-2222";
-		chulsoo.course = "회계원리";
-		chulsoo.grade = "B+";
-		
-		chulsoo.test();
-		
-		System.out.println(gildong.name);
-		System.out.println(chulsoo.name);
-		
-		// 각각의 인스턴스는 독립적인 속성을 가지고 있음
-		// 독립적인 속성 : 인스턴스 변수
-		gildong.name = "홍동길";
-		System.out.println(gildong.name);
-		System.out.println(chulsoo.name);
-		
 	}
 
 }
