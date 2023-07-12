@@ -39,6 +39,12 @@ class Student {
 	// 인스턴스 메서드 : 각각의 인스턴스가 독립적으로 사용하는 메서드
 	//               반드시 인스턴스가 생성된 후에 사용 가능
 	void study() {
+		int time = 4;
+		
+		if (time > 10) {
+			boolean flag = false;
+		}
+		
 		System.out.println(course + "를 공부한다.");
 	}
 	
@@ -60,21 +66,6 @@ class Course {
 	
 	void giveLecture() {
 		System.out.println(professor + "가 " + courseName + "을 수업한다.");
-	}
-}
-
-class MyMath {
-	
-	static final double PIE = 3.14;
-	
-	static double frustumOfACone(double r1, double r2, double h) {
-		double result = (PIE * h * (r1 * r1 + r1 * r2 + r2 * r2)) / 3;
-		return result;
-	}
-	
-	static double rightCircularConeV(double r, double h) {
-		double result = (PIE * r * r * h) / 3;
-		return result;
 	}
 }
 
@@ -162,7 +153,6 @@ public class ClassAndObject {
 		
 		// Student.study();
 		Student.startVacation();
-		
 	}
 
 }

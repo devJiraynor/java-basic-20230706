@@ -162,7 +162,6 @@ public class ClassAndObject {
 		
 		// Student.study();
 		Student.startVacation();
-		
 	}
 
 }

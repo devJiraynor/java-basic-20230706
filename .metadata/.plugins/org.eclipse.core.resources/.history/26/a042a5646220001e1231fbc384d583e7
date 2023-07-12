@@ -16,12 +16,9 @@ package chapter2;
 // 학생 : 학번, 이름, 나이, 전화번호, 수업, 성적 / 공부하다, 시험치다, 잠을자다
 class Student {
 	
-	// 클래스 변수 : 모든 인스턴스가 공통으로 값을 가지는 변수
-	//             인스턴스 생성없이 클래스로 바로 접근 가능
-	static String schoolName = "한국대학교";
+	String schoolName;
 	
 	// 인스턴스 변수 : 각각의 인스턴스가 독립적으로 값을 가지는 변수
-	//              반드시 인스턴스를 생성한 후에 사용 가능
 	String studentNumber;
 	String name;
 	int age;
@@ -29,15 +26,6 @@ class Student {
 	String course;
 	String grade;
 	
-	// 클래스 메서드 : 모든 인스턴스가 공통적으로 사용하는 메서드
-	//              인스턴스 생성 없이 클래스로 사용 가능
-	// 클래스 메서드에서는 인스턴스변수를 사용할 수 없음
-	static void startVacation() {
-		System.out.println("방학 시작!");
-	}
-	
-	// 인스턴스 메서드 : 각각의 인스턴스가 독립적으로 사용하는 메서드
-	//               반드시 인스턴스가 생성된 후에 사용 가능
 	void study() {
 		System.out.println(course + "를 공부한다.");
 	}
@@ -60,21 +48,6 @@ class Course {
 	
 	void giveLecture() {
 		System.out.println(professor + "가 " + courseName + "을 수업한다.");
-	}
-}
-
-class MyMath {
-	
-	static final double PIE = 3.14;
-	
-	static double frustumOfACone(double r1, double r2, double h) {
-		double result = (PIE * h * (r1 * r1 + r1 * r2 + r2 * r2)) / 3;
-		return result;
-	}
-	
-	static double rightCircularConeV(double r, double h) {
-		double result = (PIE * r * r * h) / 3;
-		return result;
 	}
 }
 
@@ -122,7 +95,6 @@ public class ClassAndObject {
 		
 		// 클래스명 참조변수명 = new 클래스명();
 		Student gildong = new Student();
-		// gildong.schoolName = "한국대학교";
 		gildong.studentNumber = "1223020";
 		gildong.name = "홍길동";
 		gildong.age = 24;
@@ -152,16 +124,6 @@ public class ClassAndObject {
 		gildong.name = "홍동길";
 		System.out.println(gildong.name);
 		System.out.println(chulsoo.name);
-		
-
-		System.out.println(gildong.schoolName);
-		System.out.println(chulsoo.schoolName);
-		
-		// System.out.println(Student.age);
-		System.out.println(Student.schoolName);
-		
-		// Student.study();
-		Student.startVacation();
 		
 	}
 

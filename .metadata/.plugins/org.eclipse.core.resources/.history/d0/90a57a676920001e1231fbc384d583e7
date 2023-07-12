@@ -64,16 +64,14 @@ class Course {
 }
 
 class MyMath {
-	
-	static final double PIE = 3.14;
-	
-	static double frustumOfACone(double r1, double r2, double h) {
+	double frustumOfACone(double r1, double r2, double h) {
+		final double PIE = 3.14;
 		double result = (PIE * h * (r1 * r1 + r1 * r2 + r2 * r2)) / 3;
 		return result;
 	}
 	
-	static double rightCircularConeV(double r, double h) {
-		double result = (PIE * r * r * h) / 3;
+	double rightCircularConeV(double r, double h) {
+		double result = (3.14 * r * r * h) / 3;
 		return result;
 	}
 }
@@ -162,7 +160,6 @@ public class ClassAndObject {
 		
 		// Student.study();
 		Student.startVacation();
-		
 	}
 
 }

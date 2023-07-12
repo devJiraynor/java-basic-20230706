@@ -163,6 +163,9 @@ public class ClassAndObject {
 		// Student.study();
 		Student.startVacation();
 		
+		if (chulsoo.age > 20) {
+			boolean flag = false;
+		}
 	}
 
 }

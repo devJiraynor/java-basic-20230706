@@ -1,0 +1,20 @@
+package chapter2;
+
+class Human1 {
+	String name;
+	int age;
+}
+
+public class JVM {
+
+	public static void main(String[] args) {
+		
+		Human1 you = new Human1();
+		you.name = "홍길동";
+		
+	}
+
+}
+
+
+

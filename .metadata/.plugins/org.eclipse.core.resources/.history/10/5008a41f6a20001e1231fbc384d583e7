@@ -68,6 +68,7 @@ class MyMath {
 	static final double PIE = 3.14;
 	
 	static double frustumOfACone(double r1, double r2, double h) {
+		Math
 		double result = (PIE * h * (r1 * r1 + r1 * r2 + r2 * r2)) / 3;
 		return result;
 	}
@@ -162,7 +163,6 @@ public class ClassAndObject {
 		
 		// Student.study();
 		Student.startVacation();
-		
 	}
 
 }
