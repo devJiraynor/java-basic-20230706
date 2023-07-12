@@ -1,0 +1,25 @@
+package chapter2;
+
+// 클래스
+// 특정한 객체에 대한 속성 및 기능을 정의
+// 공통적인 속성 혹은 성질을 가진 대상을 정의한 것
+
+// 클래스 선언 방법
+// 접근제어자 class 클래스명 { 속성1, 속성2, ..., 기능1, 기능2, ... }
+class Student {
+	String name;
+	int age;
+	String grade;
+}
+
+class Course {
+	
+}
+
+public class ClassAndObject {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

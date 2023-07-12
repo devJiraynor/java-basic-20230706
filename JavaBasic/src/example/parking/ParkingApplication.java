@@ -72,7 +72,9 @@ public class ParkingApplication {
 		}
 		
 		// 차종 검증
-		if (type != null && !type.equals("경차") && !type.equals("중대형") && !type.equals("SUV")) {
+		boolean validatedType = type != null && !type.equals("경차") && !type.equals("중대형") && !type.equals("SUV");
+		
+		if (validatedType) {
 			System.out.println("경차, 중대형, SUV 중에 하나를 입력하세요.");
 			return;
 		}
