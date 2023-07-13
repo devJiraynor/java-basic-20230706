@@ -1,0 +1,11 @@
+package chapter2;
+
+public class Exception {
+
+	public static void main(String[] args) {
+		
+		// 예외 : 프로그램 실행중에 발생할 수 있는 예상치 못한 상황
+		
+	}
+
+}
