@@ -1,0 +1,9 @@
+package example.parking;
+
+public class Parking2Application {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

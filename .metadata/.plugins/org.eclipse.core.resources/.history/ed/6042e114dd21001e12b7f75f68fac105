@@ -1,6 +1,6 @@
-package chapter1;
+package example.parking;
 
-public class Hello {
+public class Parking2Application {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
