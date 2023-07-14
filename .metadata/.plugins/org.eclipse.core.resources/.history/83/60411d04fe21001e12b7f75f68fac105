@@ -28,20 +28,13 @@ class ParkingSpace {
 }
 
 class EnterCarDto {
+	String registerNumber = null;
+	String type = null;
+	int getInTime = -1;
+	int layer = -1;
+	int space = -1;
 	
-	String registerNumber;
-	String type;
-	int getInTime;
-	int layer;
-	int space;
-	
-	EnterCarDto(String registerNumber, String type, int getInTime, int layer, int space) {
-		this.registerNumber = registerNumber;
-		this.type = type;
-		this.getInTime = getInTime;
-		this.layer = layer;
-		this.space = space;
-	}
+	EnterCarDto() {}
 	
 	static EnterCarDto getInstance() {
 		
@@ -50,25 +43,23 @@ class EnterCarDto {
 			Scanner scanner = new Scanner(System.in);
 			
 			System.out.println("차량 번호 : ");
-			String registerNumber = scanner.nextLine();
+			this.registerNumber = scanner.nextLine();
 			
 			System.out.println("차종 : ");
-			String type = scanner.nextLine();
+			this.type = scanner.nextLine();
 			
 			System.out.println("입차 시간 (0 ~ 24) : ");
-			int getInTime = scanner.nextInt();
+			this.getInTime = scanner.nextInt();
 			
 			System.out.println("주차 층 (0 ~ 9) : ");
-			int layer = scanner.nextInt();
+			this.layer = scanner.nextInt();
 			
 			System.out.println("주차 공간 (0 ~ 29) : ");
-			int space = scanner.nextInt();
-			
-			instance = new EnterCarDto(registerNumber, type, getInTime, layer, space);
+			this.space = scanner.nextInt();
 		} catch(Exception exception) {
 			System.out.println("입력 오류입니다.");
 		}
-		return instance;
+		
 	}
 }
 
@@ -145,8 +136,7 @@ public class Parking2Application {
 	
 	static void enterCar() {
 		// todo : 사용자로부터 입력 (차량 번호, 차종, 입차 시간, 주차 층, 주차 공간)
-		EnterCarDto dto = EnterCarDto.getInstance();
-		if (dto == null) return;
+		EnterCarDto dto = new EnterCarDto();
 		
 		// todo : 사용자입력 검증
 		if (dto.registerNumber == null || dto.type == null) {

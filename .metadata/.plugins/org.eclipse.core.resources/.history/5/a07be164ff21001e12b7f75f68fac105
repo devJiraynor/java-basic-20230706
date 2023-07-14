@@ -63,8 +63,6 @@ class EnterCarDto {
 			
 			System.out.println("주차 공간 (0 ~ 29) : ");
 			int space = scanner.nextInt();
-			
-			instance = new EnterCarDto(registerNumber, type, getInTime, layer, space);
 		} catch(Exception exception) {
 			System.out.println("입력 오류입니다.");
 		}
@@ -146,7 +144,6 @@ public class Parking2Application {
 	static void enterCar() {
 		// todo : 사용자로부터 입력 (차량 번호, 차종, 입차 시간, 주차 층, 주차 공간)
 		EnterCarDto dto = EnterCarDto.getInstance();
-		if (dto == null) return;
 		
 		// todo : 사용자입력 검증
 		if (dto.registerNumber == null || dto.type == null) {
