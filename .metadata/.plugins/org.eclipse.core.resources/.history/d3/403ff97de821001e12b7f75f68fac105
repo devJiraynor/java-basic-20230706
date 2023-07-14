@@ -88,10 +88,6 @@ public class Parking2Application {
 	static void checkParking() {
 		// todo : 주차 확인 
 	}
-	
-	static void outCar() {
-		// todo : 출차 처리
-	}
 
 }
 

@@ -33,20 +33,13 @@ public class Parking2Application {
 		
 		while(true) {
 			
-			// -1 : 잘못된 값 / 0~5 : 정상
 			int selectedMethod = input();
-			if (selectedMethod == -1) continue;
 			
 			if (selectedMethod == 0) {
 				System.out.println("프로그램 종료");
 				break;
 			}
 			
-			if (selectedMethod == 1) {}
-			if (selectedMethod == 2) {}
-			if (selectedMethod == 3) {}
-			if (selectedMethod == 4) {}
-			if (selectedMethod == 5) {}
 		}
 		
 	}
@@ -67,30 +60,7 @@ public class Parking2Application {
 		boolean validInput = selectedMethod < 0 || selectedMethod > 5;
 		if (validInput) {
 			System.out.println("잘못된 입력입니다.");
-			return -1;
 		}
-		
-		return selectedMethod;
-	}
-	
-	static void getAllFreeSpace() {
-		// todo : 전체 여유공간 출력
-	}
-	
-	static void getFloorFreeSpace() {
-		// todo : 층별 여유공간 출력
-	}
-	
-	static void enterCar() {
-		// todo : 입차 처리
-	}
-	
-	static void checkParking() {
-		// todo : 주차 확인 
-	}
-	
-	static void outCar() {
-		// todo : 출차 처리
 	}
 
 }

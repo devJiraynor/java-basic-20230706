@@ -42,11 +42,6 @@ public class Parking2Application {
 				break;
 			}
 			
-			if (selectedMethod == 1) {}
-			if (selectedMethod == 2) {}
-			if (selectedMethod == 3) {}
-			if (selectedMethod == 4) {}
-			if (selectedMethod == 5) {}
 		}
 		
 	}
@@ -71,26 +66,6 @@ public class Parking2Application {
 		}
 		
 		return selectedMethod;
-	}
-	
-	static void getAllFreeSpace() {
-		// todo : 전체 여유공간 출력
-	}
-	
-	static void getFloorFreeSpace() {
-		// todo : 층별 여유공간 출력
-	}
-	
-	static void enterCar() {
-		// todo : 입차 처리
-	}
-	
-	static void checkParking() {
-		// todo : 주차 확인 
-	}
-	
-	static void outCar() {
-		// todo : 출차 처리
 	}
 
 }
