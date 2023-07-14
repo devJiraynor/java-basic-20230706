@@ -150,7 +150,6 @@ public class Parking2Application {
 		// todo : 해당 공간이 비어있는지
 		if (PARKING_SPACES[layer][space] != null) {
 			System.out.println("이미 주차된 공간입니다.");
-			return;
 		}
 		
 		// todo : 입차 처리

@@ -136,22 +136,10 @@ public class Parking2Application {
 		}
 		
 		// todo : 주차 층 (0 ~ 9 사이 인지)
-		if (layer < 0 || layer > 9) {
-			System.out.println("주차 층은 0 ~ 9 사이 이어야 합니다.");
-			return;
-		}
 		
 		// todo : 주차 공간 (0 ~ 29 사이 인지)
-		if (space < 0 || space > 29) {
-			System.out.println("주차 공간은 0 ~ 29 사이 이어야 합니다.");
-			return;
-		}
 		
 		// todo : 해당 공간이 비어있는지
-		if (PARKING_SPACES[layer][space] != null) {
-			System.out.println("이미 주차된 공간입니다.");
-			return;
-		}
 		
 		// todo : 입차 처리
 	}

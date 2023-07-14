@@ -94,64 +94,19 @@ public class Parking2Application {
 	
 	static void enterCar() {
 		// todo : 사용자로부터 입력 (차량 번호, 차종, 입차 시간, 주차 층, 주차 공간)
-		Scanner scanner = new Scanner(System.in);
-		
-		System.out.println("차량 번호 : ");
-		String registerNumber = scanner.nextLine();
-		
-		System.out.println("차종 : ");
-		String type = scanner.nextLine();
-		
-		System.out.println("입차 시간 (0 ~ 24) : ");
-		int getInTime = scanner.nextInt();
-		
-		System.out.println("주차 층 (0 ~ 9) : ");
-		int layer = scanner.nextInt();
-		
-		System.out.println("주차 공간 (0 ~ 29) : ");
-		int space = scanner.nextInt();
 		
 		// todo : 사용자입력 검증
-		if (registerNumber == null || type == null) {
-			System.out.println("입력 오류입니다.");
-			return;
-		}
 		// todo : 차량 번호 (빈값인지 아닌지)
-		if (registerNumber.isBlank()) {
-			System.out.println("차량 번호를 반드시 입력하세요.");
-			return;
-		}
 		
 		// todo : 차종 (경차, 중대형, SUV로 입력했는지)
-		boolean validType = type.equals("경차") || type.equals("중대형") || type.equals("SUV");
-		if (!validType) {
-			System.out.println("경차, 중대형, SUV 중에 하나를 입력하세요.");
-			return;
-		}
 		
 		// todo : 입차 시간 (0 ~ 24 사이 인지)
-		if (getInTime < 0 || getInTime > 24) {
-			System.out.println("입차 시간은 0 ~ 24 사이 이어야 합니다.");
-			return;
-		}
 		
 		// todo : 주차 층 (0 ~ 9 사이 인지)
-		if (layer < 0 || layer > 9) {
-			System.out.println("주차 층은 0 ~ 9 사이 이어야 합니다.");
-			return;
-		}
 		
 		// todo : 주차 공간 (0 ~ 29 사이 인지)
-		if (space < 0 || space > 29) {
-			System.out.println("주차 공간은 0 ~ 29 사이 이어야 합니다.");
-			return;
-		}
 		
 		// todo : 해당 공간이 비어있는지
-		if (PARKING_SPACES[layer][space] != null) {
-			System.out.println("이미 주차된 공간입니다.");
-			return;
-		}
 		
 		// todo : 입차 처리
 	}
