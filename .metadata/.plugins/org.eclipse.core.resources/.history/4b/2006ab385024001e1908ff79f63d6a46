@@ -1,0 +1,38 @@
+package chapter2;
+
+// 직업
+class Teacher {
+	String name;
+	int age;
+	String address;
+	String school;
+	int gradeClass;
+	
+	void eat(String food) {
+		System.out.println(food + "을/를 먹는다.");
+	}
+	
+	void teaching() {
+		System.out.println(gradeClass + "에서 수업을 한다.");
+	}
+}
+
+class Police {
+	String name;
+	int age;
+	String address;
+	String position;
+	String area;
+	
+	
+}
+
+public class Inheritance {
+
+	public static void main(String[] args) {
+		
+	}
+
+}
+
+

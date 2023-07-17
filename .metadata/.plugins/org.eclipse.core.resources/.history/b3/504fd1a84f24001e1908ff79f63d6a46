@@ -1,0 +1,14 @@
+package chapter2;
+
+// 직업
+class Teacher {
+	
+}
+
+public class Inheritance {
+
+	public static void main(String[] args) {
+		
+	}
+
+}
