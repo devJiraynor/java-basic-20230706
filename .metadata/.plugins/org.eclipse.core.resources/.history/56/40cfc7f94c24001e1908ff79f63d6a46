@@ -129,15 +129,17 @@ public class Parking2Application {
 			// -1 : 잘못된 값 / 0~5 : 정상
 			int selectedMethod = input();
 			if (selectedMethod == -1) continue;
+			
 			if (selectedMethod == 0) {
 				System.out.println("프로그램 종료");
 				break;
 			}
+			
 			if (selectedMethod == 1) getAllFreeSpace();
 			if (selectedMethod == 2) getFloorFreeSpace();
 			if (selectedMethod == 3) enterCar();
 			if (selectedMethod == 4) checkParking();
-			if (selectedMethod == 5) outCar();
+			if (selectedMethod == 5) {}
 		}
 		
 	}

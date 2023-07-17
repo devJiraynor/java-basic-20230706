@@ -104,16 +104,6 @@ class EnterCarDto {
 	}
 }
 
-class FindCarDto {
-	int floor;
-	int space;
-	
-	FindCarDto(int floor, int space) {
-		this.floor = floor;
-		this.space = space;
-	}
-}
-
 public class Parking2Application {
 	
 	static final int LIGHT_FARE = 1000;
@@ -129,15 +119,17 @@ public class Parking2Application {
 			// -1 : 잘못된 값 / 0~5 : 정상
 			int selectedMethod = input();
 			if (selectedMethod == -1) continue;
+			
 			if (selectedMethod == 0) {
 				System.out.println("프로그램 종료");
 				break;
 			}
+			
 			if (selectedMethod == 1) getAllFreeSpace();
 			if (selectedMethod == 2) getFloorFreeSpace();
 			if (selectedMethod == 3) enterCar();
 			if (selectedMethod == 4) checkParking();
-			if (selectedMethod == 5) outCar();
+			if (selectedMethod == 5) {}
 		}
 		
 	}
@@ -210,14 +202,30 @@ public class Parking2Application {
 			return;
 		}
 		
-		FindCarDto findCarDto = findCar(registerNumber);
+		int foundFloor = -1;
+		int foundSpace = -1;
 		
-		if (findCarDto == null) {
+		for (int floor = 0; floor < PARKING_SPACES.length; floor++) {
+			for (int space = 0; space < PARKING_SPACES[floor].length; space++) {
+				
+				if (PARKING_SPACES[floor][space] == null) continue;
+					
+				if (registerNumber.equals(PARKING_SPACES[floor][space].registerNumber)) {
+					foundFloor = floor;
+					foundSpace = space;
+					break;
+				}
+				
+			}
+			if (foundFloor != -1 && foundSpace != -1) break;
+		}
+		
+		if (foundFloor == -1 || foundSpace == -1) {
 			System.out.println("찾을 수 없는 차량 번호입니다.");
 			return;
 		}
 		
-		System.out.println(findCarDto.floor + "층 " + findCarDto.space + "번에 위치합니다.");
+		System.out.println(foundFloor + "층 " + foundSpace + "번에 위치합니다.");
 	}
 	
 	static void outCar() {
@@ -242,56 +250,6 @@ public class Parking2Application {
 			System.out.println("입력 오류입니다.");
 			return;
 		}
-		
-		if (registerNumber.isBlank()) {
-			System.out.println("차량 번호를 반드시 입력해주세요.");
-			return;
-		}
-		
-		if (outTime < 0 || outTime > 24) {
-			System.out.println("출차 시간은 0 ~ 24 사이어야 합니다.");
-			return;
-		}
-		
-		FindCarDto findCarDto = findCar(registerNumber);
-		if (findCarDto == null) {
-			System.out.println("찾을 수 없는 차량번호입니다.");
-			return;
-		}
-		
-		ParkingSpace parkingSpace = PARKING_SPACES[findCarDto.floor][findCarDto.space];
-		if (parkingSpace.getInTime < outTime) {
-			System.out.println("출차 시간이 입차 시간보다 작을 수 없습니다.");
-			return;
-		}
-		
-		int typePayment = parkingSpace.type.equals("경차") ? LIGHT_FARE :
-						parkingSpace.type.equals("중대형") ? HEAVY_FARE : SUV_FARE;
-		
-		int payment = (outTime - parkingSpace.getInTime) * typePayment;
-		System.out.println("최종 금액은 " + payment + "원 입니다.");
-		
-		PARKING_SPACES[findCarDto.floor][findCarDto.space] = null;
-		
-	}
-	
-	static FindCarDto findCar(String registerNumber) {
-		
-		FindCarDto dto = null;
-		
-		for (int floor = 0; floor < PARKING_SPACES.length; floor++) {
-			for (int space = 0; space < PARKING_SPACES[floor].length; space++) {
-				if (PARKING_SPACES[floor][space] == null) continue;
-				if (registerNumber.equals(PARKING_SPACES[floor][space].registerNumber)) {
-					dto = new FindCarDto(floor, space);
-					break;
-				}
-			}
-			if (dto != null) break;
-		}
-		
-		return dto;
-		
 	}
 
 }
