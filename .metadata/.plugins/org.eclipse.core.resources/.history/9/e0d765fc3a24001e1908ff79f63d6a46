@@ -1,0 +1,19 @@
+package chapter2;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Dog jindo = new Dog();
+		jindo.age = 10;
+		jindo.name = "진돌이";
+
+		Dog shiba = new Dog();
+		jindo.age = 2;
+		jindo.name = "초코";
+
+		Dog poodle = shiba;
+		jindo.age = 5;
+		jindo.name = "하루";
+	}
+
+}

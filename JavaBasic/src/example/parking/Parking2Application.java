@@ -1,5 +1,6 @@
 package example.parking;
 
+import java.util.Calendar;
 import java.util.Scanner;
 
 // 주차장 관리 프로그램
@@ -64,6 +65,37 @@ class EnterCarDto {
 			System.out.println("주차 공간 (0 ~ 29) : ");
 			int space = scanner.nextInt();
 			
+			if (registerNumber == null || type == null) {
+				System.out.println("입력 오류입니다.");
+				return null;
+			}
+			
+			if (registerNumber.isBlank()) {
+				System.out.println("차량 번호를 반드시 입력하세요.");
+				return null;
+			}
+			
+			boolean validType = type.equals("경차") || type.equals("중대형") || type.equals("SUV");
+			if (!validType) {
+				System.out.println("경차, 중대형, SUV 중에 하나를 입력하세요.");
+				return null;
+			}
+			
+			if (getInTime < 0 || getInTime > 24) {
+				System.out.println("입차 시간은 0 ~ 24 사이 이어야 합니다.");
+				return null;
+			}
+			
+			if (layer < 0 || layer > 9) {
+				System.out.println("주차 층은 0 ~ 9 사이 이어야 합니다.");
+				return null;
+			}
+			
+			if (space < 0 || space > 29) {
+				System.out.println("주차 공간은 0 ~ 29 사이 이어야 합니다.");
+				return null;
+			}
+			
 			instance = new EnterCarDto(registerNumber, type, getInTime, layer, space);
 		} catch(Exception exception) {
 			System.out.println("입력 오류입니다.");
@@ -96,7 +128,7 @@ public class Parking2Application {
 			if (selectedMethod == 1) getAllFreeSpace();
 			if (selectedMethod == 2) getFloorFreeSpace();
 			if (selectedMethod == 3) enterCar();
-			if (selectedMethod == 4) {}
+			if (selectedMethod == 4) checkParking();
 			if (selectedMethod == 5) {}
 		}
 		
@@ -144,59 +176,56 @@ public class Parking2Application {
 	}
 	
 	static void enterCar() {
-		// todo : 사용자로부터 입력 (차량 번호, 차종, 입차 시간, 주차 층, 주차 공간)
 		EnterCarDto dto = EnterCarDto.getInstance();
 		if (dto == null) return;
 		
-		// todo : 사용자입력 검증
-		if (dto.registerNumber == null || dto.type == null) {
-			System.out.println("입력 오류입니다.");
-			return;
-		}
-		
-		// todo : 차량 번호 (빈값인지 아닌지)
-		if (dto.registerNumber.isBlank()) {
-			System.out.println("차량 번호를 반드시 입력하세요.");
-			return;
-		}
-		
-		// todo : 차종 (경차, 중대형, SUV로 입력했는지)
-		boolean validType = dto.type.equals("경차") || dto.type.equals("중대형") || dto.type.equals("SUV");
-		if (!validType) {
-			System.out.println("경차, 중대형, SUV 중에 하나를 입력하세요.");
-			return;
-		}
-		
-		// todo : 입차 시간 (0 ~ 24 사이 인지)
-		if (dto.getInTime < 0 || dto.getInTime > 24) {
-			System.out.println("입차 시간은 0 ~ 24 사이 이어야 합니다.");
-			return;
-		}
-		
-		// todo : 주차 층 (0 ~ 9 사이 인지)
-		if (dto.layer < 0 || dto.layer > 9) {
-			System.out.println("주차 층은 0 ~ 9 사이 이어야 합니다.");
-			return;
-		}
-		
-		// todo : 주차 공간 (0 ~ 29 사이 인지)
-		if (dto.space < 0 || dto.space > 29) {
-			System.out.println("주차 공간은 0 ~ 29 사이 이어야 합니다.");
-			return;
-		}
-		
-		// todo : 해당 공간이 비어있는지
 		if (PARKING_SPACES[dto.layer][dto.space] != null) {
 			System.out.println("이미 주차된 공간입니다.");
 			return;
 		}
 		
-		// todo : 입차 처리
 		PARKING_SPACES[dto.layer][dto.space] = new ParkingSpace(dto.registerNumber, dto.getInTime, dto.type);
 	}
 	
 	static void checkParking() {
-		// todo : 주차 확인 
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("차량 번호를 입력하세요.");
+		String registerNumber = scanner.nextLine();
+		
+		if (registerNumber == null) {
+			System.out.println("입력 오류입니다.");
+			return;
+		}
+		
+		if (registerNumber.isBlank()) {
+			System.out.println("차량 번호를 반드시 입력해주세요.");
+			return;
+		}
+		
+		int foundFloor = -1;
+		int foundSpace = -1;
+		
+		for (int floor = 0; floor < PARKING_SPACES.length; floor++) {
+			for (int space = 0; space < PARKING_SPACES[floor].length; space++) {
+				
+				if (PARKING_SPACES[floor][space] == null) continue;
+					
+				if (registerNumber.equals(PARKING_SPACES[floor][space].registerNumber)) {
+					foundFloor = floor;
+					foundSpace = space;
+					break;
+				}
+				
+			}
+			if (foundFloor != -1 && foundSpace != -1) break;
+		}
+		
+		if (foundFloor == -1 || foundSpace == -1) {
+			System.out.println("찾을 수 없는 차량 번호입니다.");
+			return;
+		}
+		
+		System.out.println(foundFloor + "층 " + foundSpace + "번에 위치합니다.");
 	}
 	
 	static void outCar() {
