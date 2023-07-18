@@ -1,0 +1,12 @@
+package chapter2;
+
+// 제어자 : 클래스, 메서드, 변수에 부가적인 성질을 추가하는 키워드
+// 접근제어자, 일반제어자(비접근제어자)
+
+public class Modifier {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

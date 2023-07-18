@@ -80,6 +80,8 @@ public class Overloading {
 		dto.grade = "A+";
 		
 		studentInfoPrint(dto);
+		
+		Dog dog = new Dog();
 	
 	}
 

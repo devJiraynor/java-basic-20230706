@@ -1,5 +1,7 @@
 package chapter2;
 
+import chapter1.Hello;
+
 class Human {
 	String name;
 	int age;

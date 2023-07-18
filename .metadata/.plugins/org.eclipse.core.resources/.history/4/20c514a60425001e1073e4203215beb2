@@ -1,0 +1,37 @@
+package chapter2;
+
+import chapter2_1.Modifier2;
+
+// 제어자 : 클래스, 메서드, 변수에 부가적인 성질을 추가하는 키워드
+// 접근제어자, 일반제어자(비접근제어자)
+
+// 접근제어자 : 클래스, 메서드, 변수에 대한 접근 위치 제어
+// public - 모든 곳에서 접근 가능
+// protected - 같은 패키지 내부 혹은 상속받은 클래스에서만 접근 가능
+// default - 같은 패키지 내부에서 접근 가능
+// private - 클래스 내부에서 접근 가능
+class Modifier3 extends Modifier2 {
+	
+	String defaultVariable;
+	private String privateVariable;
+	
+	void method1() {
+		super.protectedVariable = "protected";
+		super.defaultVariable = "default";
+	}
+	
+}
+
+public class Modifier {
+
+	public static void main(String[] args) {
+		Modifier2 instance1 = new Modifier2();
+		instance1.publicVariable = "public";
+		instance1.protectedVariable = "protected";
+		instance1.defaultVariable = "default";
+		
+		Modifier3 instance2 = new Modifier3();
+		instance2.protectedVariable = "protected";
+	}
+
+}
