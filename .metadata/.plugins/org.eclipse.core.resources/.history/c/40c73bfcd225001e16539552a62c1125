@@ -1,0 +1,11 @@
+package chapter3;
+
+// Collection Framework
+// 
+public class CollectionFramework {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

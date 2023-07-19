@@ -1,0 +1,19 @@
+package chapter3;
+
+// Collection Framework
+// 데이터를 저장하는 구조를 제공하는 표준화된 인터페이스 및 클래스
+// 저장, 검색, 수정, 삭제에 대한 기능을 제공
+// [List, Set, Map], Queue, Stack
+
+public class CollectionFramework {
+
+	public static void main(String[] args) {
+		
+		// List 인터페이스
+		
+		
+	}
+
+}
+
+

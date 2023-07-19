@@ -1,0 +1,22 @@
+package chapter3;
+
+// Collection Framework
+// 데이터를 저장하는 구조를 제공하는 표준화된 인터페이스 및 클래스
+// 저장, 검색, 수정, 삭제에 대한 기능을 제공
+// [List, Set, Map], Queue, Stack
+
+public class CollectionFramework {
+
+	public static void main(String[] args) {
+		
+		// List 인터페이스
+		// 순서가 있고 중복을 허용하는 데이터 저장 구조를 표현할 때 사용
+		// 1. ArrayList 구현체
+		
+		// 2. LinkedList 구현체
+		
+	}
+
+}
+
+

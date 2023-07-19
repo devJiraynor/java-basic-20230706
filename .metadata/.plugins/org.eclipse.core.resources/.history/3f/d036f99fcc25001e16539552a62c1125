@@ -1,0 +1,12 @@
+package chapter3;
+
+// Wrapper 클래스
+// 기본형 데이터 타입을 참조형 데이터 타입으로 다루고자 할때 사용 할 수 있는 클래스
+
+public class Wrapper {
+
+	public static void main(String[] args) {
+		
+	}
+
+}
