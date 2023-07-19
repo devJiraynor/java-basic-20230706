@@ -1,7 +1,5 @@
 package chapter3;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
@@ -52,26 +50,6 @@ public class DateTimeClass {
 		
 		// 3. Calendar 클래스
 		// Date 클래스를 대체하기 위해 나온 클래스, 추상 클래스 (GregorianCalendar 클래스 사용, getInstance() 메서드 사용)
-		// JDK 8 버전까지 사용되었음 - LocalDateTime으로 대체되었음
-		Calendar calendar = new GregorianCalendar();
-		System.out.println(calendar);
-		
-		year = calendar.get(Calendar.YEAR);
-		month = calendar.get(Calendar.MONTH);
-		dates = calendar.get(Calendar.DATE);
-		System.out.println(year + " " + month + " " + dates);
-		
-		calendar.set(Calendar.YEAR, 2001);
-		year = calendar.get(Calendar.YEAR);
-		System.out.println(year + " " + month + " " + dates);
-		
-		// SimpleDateFormat 클래스
-		// Date 타입의 인스턴스를 문자열로 표현하는 클래스
-		// y : 연도 , M : 월 , d : 일 , h : 시간 , m : 분 , s : 초 
-		// a : 오전/오후 , E : 요일
-		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy.MM.dd.");
-		System.out.println(simpleDateFormat.format(new Date()));
-		
 	}
 
 }

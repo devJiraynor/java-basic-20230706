@@ -1,0 +1,22 @@
+package chapter3;
+
+// 날짜 및 시간 표현 방법
+// 1. System.currentTimeMillis();
+// 2. Date 클래스
+// 3. Calendar 클래스
+// 4. LocalDateTime 클래스
+
+public class DateTimeClass {
+
+	public static void main(String[] args) {
+		
+		// 1. System.currentTimeMillis();
+		// 현재 운영체제의 시간을 1970년 1월 1일 0시 0분 0초 0밀리초 기준으로 경과한 시간을
+		// 밀리초 기준으로 표현
+		// 반환 타입 : long
+		
+		
+		
+	}
+
+}
