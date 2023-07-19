@@ -1,0 +1,12 @@
+package chapter3;
+
+// 날짜 및 시간 표현 방법
+// 1. System.currentTimeMillis();
+
+public class DateTimeClass {
+
+	public static void main(String[] args) {
+		
+	}
+
+}
