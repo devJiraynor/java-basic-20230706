@@ -1,0 +1,49 @@
+package chapter3;
+
+class Result1 {
+	int code;
+	String message;
+	String name;
+	int age;
+	
+	void print() {
+		System.out.println("안녕");
+	}
+}
+
+class Result2 {
+	int code;
+	String message;
+	String name;
+	String age;
+	
+	void print() {
+		System.out.println("안녕");
+	}
+}
+
+public class Generic {
+
+	public static void main(String[] args) {
+		Result result = new Result();
+
+		result.age = 23;
+		result.age = "23";
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		int age = (Integer) result.age;
+		System.out.println(age + 10);
+	}
+
+}

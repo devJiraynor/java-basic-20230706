@@ -130,9 +130,9 @@ public class DateTimeClass {
 		// isEqual() : 특정 인스턴스가 매개변수로 전달되는 날짜 인스턴스와 같은지
 		System.out.println(localDateTime1.isAfter(localDateTime2));
 		System.out.println(localDateTime1.isBefore(localDateTime2));
-		System.out.println(localDateTime1.until(localDateTime2, ChronoUnit.YEARS));
-		
-		System.out.println(localDateTime1.getMonth());
+		System.out.println(localDateTime1);
+		System.out.println(localDateTime2);
+		System.out.println(localDateTime1.until(localDateTime2, ChronoUnit.HOURS));
 		
 	}
 

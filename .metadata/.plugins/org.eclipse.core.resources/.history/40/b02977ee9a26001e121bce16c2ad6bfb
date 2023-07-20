@@ -4,8 +4,6 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.time.Month;
-import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -128,11 +126,10 @@ public class DateTimeClass {
 		// isAfter() : 특정 인스턴스가 매개변수로 전달되는 날짜 인스턴스보다 이후 인지
 		// isBefore() : 특정 인스턴스가 매개변수로 전달되는 날짜 인스턴스보다 이전 인지
 		// isEqual() : 특정 인스턴스가 매개변수로 전달되는 날짜 인스턴스와 같은지
+		LocalDateTime localDateTime3 = LocalDateTime.of(localDate1, localTime2);
 		System.out.println(localDateTime1.isAfter(localDateTime2));
 		System.out.println(localDateTime1.isBefore(localDateTime2));
-		System.out.println(localDateTime1.until(localDateTime2, ChronoUnit.YEARS));
-		
-		System.out.println(localDateTime1.getMonth());
+		System.out.println(localDateTime1.until(localDateTime2, localDateTime3));
 		
 	}
 

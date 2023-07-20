@@ -1,0 +1,22 @@
+package chapter3;
+
+class Result {
+	int code;
+	String message;
+	String name;
+	Integer age;
+	String age;
+	
+	void print() {
+		System.out.println("안녕");
+	}
+}
+
+public class Generic {
+
+	public static void main(String[] args) {
+		Result result = new Result();
+		Object object = new Result();
+	}
+
+}

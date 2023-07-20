@@ -1,0 +1,16 @@
+package chapter3;
+
+class Result {
+	String code;
+	String message;
+	String name;
+	int age;
+}
+
+public class Generic {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

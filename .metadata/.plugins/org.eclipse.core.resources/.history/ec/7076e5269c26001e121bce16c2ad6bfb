@@ -132,8 +132,6 @@ public class DateTimeClass {
 		System.out.println(localDateTime1.isBefore(localDateTime2));
 		System.out.println(localDateTime1.until(localDateTime2, ChronoUnit.YEARS));
 		
-		System.out.println(localDateTime1.getMonth());
-		
 	}
 
 }
