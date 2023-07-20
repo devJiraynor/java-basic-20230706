@@ -114,7 +114,7 @@ public class DateTimeClass {
 		
 		// 특정 요소 연산
 		// 해당 인스턴스에서 minus??? , plus???
-		localDateTime2 = localDateTime2.minusYears(6).plusMonths(3).plusDays(10);
+		localDateTime2.minusYears(6).plusMonths(3).plusDays(10);
 		System.out.println(localDateTime2);
 		
 	}

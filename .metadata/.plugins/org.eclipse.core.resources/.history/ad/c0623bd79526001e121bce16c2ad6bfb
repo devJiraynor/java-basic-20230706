@@ -98,24 +98,6 @@ public class DateTimeClass {
 		System.out.println(localDate2);
 		
 		LocalDateTime localDateTime1 = LocalDateTime.now();
-		LocalDateTime localDateTime2 = LocalDateTime.of(localDate2, localTime2);
-		
-		System.out.println(localDateTime1);
-		System.out.println(localDateTime2);
-		
-		// 특정 요소 가져오기
-		// 해당 인스턴스에서 get???
-		year = localDateTime1.getYear();
-		month = localDateTime1.getMonthValue();
-		dates = localDateTime1.getDayOfMonth();
-		int hour = localDateTime1.getHour();
-		int minute = localDateTime1.getMinute();
-		int second = localDateTime1.getSecond();
-		
-		// 특정 요소 연산
-		// 해당 인스턴스에서 minus??? , plus???
-		localDateTime2 = localDateTime2.minusYears(6).plusMonths(3).plusDays(10);
-		System.out.println(localDateTime2);
 		
 	}
 
