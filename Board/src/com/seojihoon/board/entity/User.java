@@ -1,5 +1,6 @@
 package com.seojihoon.board.entity;
 
+import com.seojihoon.board.dto.request.SignUpRequestDto;
 
 // 이메일 / 비밀번호 / 닉네임 / 휴대전화번호 / 주소 / 상세주소 / 개인정보동의 여부 / 프로필 사진
 public class User {
@@ -22,6 +23,17 @@ public class User {
 		this.address = address;
 		this.addressDetail = addressDetail;
 		this.agreedPersonal = agreedPersonal;
+	}
+	
+	public User (SignUpRequestDto dto) {
+		this.email = dto.getEmail();
+		this.password = dto.getPassword();
+		this.nickname = dto.getNickname();
+		this.telNumber = dto.getTelNumber();
+		this.address = dto.getAddress();
+		this.addressDetail = dto.getAddressDetail();
+		this.agreedPersonal = dto.isAgreedPersonal();
+		this.profileImage = null;
 	}
 
 	public String getNickname() {
