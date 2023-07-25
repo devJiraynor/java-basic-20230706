@@ -3,6 +3,8 @@ package com.seojihoon.board.dto.request;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.seojihoon.board.common.PatternValidator;
+
 // 이메일주소, 비밀번호, 비밀번호확인
 // 닉네임, 핸드폰번호, 주소, 상세 주소, 개인정보동의여부
 public class SignUpRequestDto {
@@ -101,23 +103,17 @@ public class SignUpRequestDto {
 		if (!password.equals(passwordCheck)) {
 			return false;
 		}
-		
-		final String EMAIL_REGEX =
-		        "^[a-zA-Z0-9_+&*-]+(?:\\." +
-		        "[a-zA-Z0-9_+&*-]+)*@" +
-		        "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
-		        "A-Z]{2,7}$";
-
-        Pattern pattern = Pattern.compile(EMAIL_REGEX);
-        Matcher matcher = pattern.matcher(email);
-        boolean emailCheck = matcher.matches();
         
-        if (emailCheck) {
+		boolean emailCheck = PatternValidator.isValidEmail(email);
+        if (!emailCheck) {
         	return false;
         }
         
+        boolean telNumberCheck = PatternValidator.isValidTelNumber(telNumber);
+        if (!telNumberCheck) {
+        	return false;
+        }
         
-		
 		return true;
 	}
 	
