@@ -64,4 +64,22 @@ public class User {
 		return agreedPersonal;
 	}
 	
+	public boolean isCreateValid() {
+		if (email == null || password == null || 
+				nickname == null || telNumber == null || address == null) {
+			return false;
+		}
+		
+		if (email.isBlank() || password.isBlank() ||
+				nickname.isBlank() || telNumber.isBlank() ||
+				address.isBlank() || !agreedPersonal) {
+			return false;
+		}
+		return true;
+	}
+	
 }
+
+
+
+
