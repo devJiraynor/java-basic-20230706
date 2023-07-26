@@ -1,5 +1,6 @@
 package com.seojihoon.board.service.implement;
 
+import com.seojihoon.board.common.ResponseMessage;
 import com.seojihoon.board.dto.request.SignInRequestDto;
 import com.seojihoon.board.dto.request.SignUpRequestDto;
 import com.seojihoon.board.dto.response.ResponseEntity;
@@ -27,24 +28,24 @@ public class UserServiceImplement implements UserService {
 		
 		// 이메일 중복 확인
 		boolean hasEmail = userRepository.existsByEmail(email);
-		if (hasEmail) return new ResponseEntity<SignUpResponseDto>(400, "중복된 이메일입니다.", null);
+		if (hasEmail) return ResponseEntity.badRequest(ResponseMessage.EXISTED_EMAIL);
 		
 		// 전화번호 중복 확인
 		boolean hasTelNumber = userRepository.existsByTelNumber(telNumber);
-		if (hasTelNumber) return new ResponseEntity<SignUpResponseDto>(400, "중복된 전화번호입니다.", null);
+		if (hasTelNumber) return ResponseEntity.badRequest(ResponseMessage.EXISTED_TEL_NUMBER);
 		
 		// 닉네임 중복 확인
 		boolean hasNickname = userRepository.existsByNickname(nickname);
-		if (hasNickname) return new ResponseEntity<SignUpResponseDto>(400, "중복된 닉네임입니다.", null);
+		if (hasNickname) return ResponseEntity.badRequest(ResponseMessage.EXISTED_NICKNAME);
 		
 		// Entity 생성
 		User user = new User(dto);
 		
 		// Entity 저장
 		boolean result = userRepository.create(user);
-		if (!result) return new ResponseEntity<SignUpResponseDto>(500, "데이터베이스 오류입니다.", null);
+		if (!result) return ResponseEntity.internalServerError(ResponseMessage.DATABASE_ERROR);
 		
-		return new ResponseEntity<SignUpResponseDto>(200, "성공", null);
+		return ResponseEntity.ok();
 	}
 
 	@Override
@@ -55,16 +56,13 @@ public class UserServiceImplement implements UserService {
 		
 		// 이메일로 유저정보 찾기
 		User user = userRepository.read(email);
-		if (user == null) 
-			return new ResponseEntity<SignInResponseDto>(401, "로그인 정보가 일치하지 않습니다.", null);
+		if (user == null) return ResponseEntity.unauthorized();
 		
 		// 입력한 비밀번호가 저장된 비밀번호와 같은지 비교
-		if (!password.equals(user.getPassword()))
-			return new ResponseEntity<SignInResponseDto>(401, "로그인 정보가 일치하지 않습니다.", null);
+		if (!password.equals(user.getPassword())) return ResponseEntity.unauthorized();
 		
 		SignInResponseDto data = new SignInResponseDto(user);
-		
-		return new ResponseEntity<SignInResponseDto>(200, "성공", data);
+		return ResponseEntity.ok(data);
 	}
 
 }

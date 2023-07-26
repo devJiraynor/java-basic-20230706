@@ -19,7 +19,7 @@ public class UserControllerImplement implements UserController {
 	@Override
 	public ResponseEntity<SignUpResponseDto> signUp(SignUpRequestDto requestDto) {
 		boolean isValid = requestDto.valid();
-		if (!isValid) return new ResponseEntity<SignUpResponseDto>(400, "올바르지 않은 입력입니다.", null);
+		if (!isValid) return ResponseEntity.badRequest();
 		
 		ResponseEntity<SignUpResponseDto> result = userService.signUp(requestDto);
 		return result;
@@ -28,7 +28,7 @@ public class UserControllerImplement implements UserController {
 	@Override
 	public ResponseEntity<SignInResponseDto> signIn(SignInRequestDto requestDto) {
 		boolean isValid = requestDto.valid();
-		if (!isValid) return new ResponseEntity<SignInResponseDto>(400, "올바르지 않은 입력입니다.", null);
+		if (!isValid) return ResponseEntity.badRequest();
 		
 		ResponseEntity<SignInResponseDto> result = userService.signIn(requestDto);
 		return result;
