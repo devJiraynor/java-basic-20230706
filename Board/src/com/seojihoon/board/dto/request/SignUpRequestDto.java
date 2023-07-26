@@ -1,8 +1,5 @@
 package com.seojihoon.board.dto.request;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import com.seojihoon.board.common.PatternValidator;
 
 // 이메일주소, 비밀번호, 비밀번호확인

@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
     <typeInfo handle="=JavaBasic/src&lt;chapter2{Aircon.java[Aircon" modifiers="513" timestamp="1689651810579"/>
+    <typeInfo handle="=Board/src&lt;com.seojihoon.board.service{UserService.java[UserService" modifiers="513" timestamp="1689913119756"/>
+    <typeInfo handle="=Board/C:\/Users\/ITPS\/.p2\/pool\/plugins\/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\/jre\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/17\/docs\/api\/=/=/module=/true=/&lt;java.nio.file.attribute(UserPrincipal.class[UserPrincipal" modifiers="1537" timestamp="1682402758000"/>
+    <typeInfo handle="=Board/src&lt;com.seojihoon.board.controller{UserController.java[UserController" modifiers="513" timestamp="1689912606260"/>
 </typeInfoHistroy>

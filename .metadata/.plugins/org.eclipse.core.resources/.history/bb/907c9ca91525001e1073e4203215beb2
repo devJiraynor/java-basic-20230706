@@ -1,7 +1,0 @@
-package chapter2;
-
-public interface Aircon {
-	// 전원
-	// 풍량 조절
-	// 풍향 조절
-}
