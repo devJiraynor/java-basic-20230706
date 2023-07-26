@@ -1,7 +1,9 @@
 package com.seojihoon.board.service.implement;
 
+import com.seojihoon.board.dto.request.SignInRequestDto;
 import com.seojihoon.board.dto.request.SignUpRequestDto;
 import com.seojihoon.board.dto.response.ResponseEntity;
+import com.seojihoon.board.dto.response.SignInResponseDto;
 import com.seojihoon.board.dto.response.SignUpResponseDto;
 import com.seojihoon.board.entity.User;
 import com.seojihoon.board.repository.UserRepository;
@@ -45,4 +47,28 @@ public class UserServiceImplement implements UserService {
 		return new ResponseEntity<SignUpResponseDto>(200, "성공", null);
 	}
 
+	@Override
+	public ResponseEntity<SignInResponseDto> signIn(SignInRequestDto dto) {
+		
+		String email = dto.getEmail();
+		String password = dto.getPassword();
+		
+		// 이메일로 유저정보 찾기
+		User user = userRepository.read(email);
+		if (user == null) 
+			return new ResponseEntity<SignInResponseDto>(401, "로그인 정보가 일치하지 않습니다.", null);
+		
+		// 입력한 비밀번호가 저장된 비밀번호와 같은지 비교
+		if (!password.equals(user.getPassword()))
+			return new ResponseEntity<SignInResponseDto>(401, "로그인 정보가 일치하지 않습니다.", null);
+		
+		SignInResponseDto data = new SignInResponseDto(user);
+		
+		return new ResponseEntity<SignInResponseDto>(200, "성공", data);
+	}
+
 }
+
+
+
+

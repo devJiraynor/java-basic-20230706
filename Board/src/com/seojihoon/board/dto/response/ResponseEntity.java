@@ -10,5 +10,10 @@ public class ResponseEntity<D> {
 		this.message = message;
 		this.data = data;
 	}
+
+	@Override
+	public String toString() {
+		return "[status=" + status + ", message=" + message + ", data=" + data + "]";
+	}
 	
 }

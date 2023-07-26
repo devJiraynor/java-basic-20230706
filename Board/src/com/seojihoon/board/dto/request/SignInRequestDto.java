@@ -23,4 +23,15 @@ public class SignInRequestDto {
 		this.password = password;
 	}
 	
+	public boolean valid() {
+		if (email == null || password == null) return false;
+		if (email.isBlank() || password.isBlank()) return false;
+		return true;
+	}
+	
 }
+
+
+
+
+
