@@ -5,6 +5,7 @@ import java.util.Scanner;
 import com.seojihoon.board.controller.UserController;
 import com.seojihoon.board.controller.implement.UserControllerImplement;
 import com.seojihoon.board.dto.request.SignUpRequestDto;
+import com.seojihoon.board.dto.response.ResponseEntity;
 import com.seojihoon.board.dto.response.SignUpResponseDto;
 import com.seojihoon.board.repository.UserRepository;
 import com.seojihoon.board.repository.implement.UserRepositoryImplement;
@@ -58,7 +59,7 @@ public class BoardApplication {
 			return;
 		}
 		
-		SignUpResponseDto result = userController.signUp(dto);
+		ResponseEntity<SignUpResponseDto> result = userController.signUp(dto);
 		System.out.println(result.toString());
 	}
 
